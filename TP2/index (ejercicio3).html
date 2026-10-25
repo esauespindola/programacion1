@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aumento de precios</title>
+</head>
+
+<body>
+
+<script type="module">
+
+    import { calcularAumento } from "./libreria.js";
+
+    let opcion = "si";
+
+    while (opcion === "si") {
+
+        let precio = Number(prompt("Ingrese el precio:"));
+
+        let datos = {
+            precio: precio,
+            aumento: 0,
+            porcentaje: 0,
+            precioActualizado: 0
+        };
+
+        calcularAumento(datos);
+
+        console.log("Precio original:", datos.precio);
+        console.log("Aumento aplicado:", datos.aumento);
+        console.log("Porcentaje aplicado:", datos.porcentaje + "%");
+        console.log("Precio actualizado:", datos.precioActualizado);
+
+        opcion = prompt("¿Desea ingresar otro precio? si/no");
+    }
+
+</script>
+
+</body>
+</html>
