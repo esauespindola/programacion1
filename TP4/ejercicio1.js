@@ -34,3 +34,12 @@ class lista {
 
 
 }
+
+let a = new lista();
+
+a.add(1);
+a.add(4);
+a.add(8);
+a.add(5);
+
+a.mostrar();
